@@ -7,13 +7,20 @@ import Dashboard from './pages/Dashboard';
 import AddUser from './pages/AddUser';
 
 function App() {
-  // Simple routing based on path
+  // Get the current path
   const path = window.location.pathname;
   
+  // Render the appropriate component based on the path
   const renderContent = () => {
+    // Handle both root path and /dashboard path
+    if (path === '/' || path === '/dashboard' || path === '') {
+      return <Dashboard />;
+    }
+    // Handle /dashboard/add path
     if (path === '/dashboard/add') {
       return <AddUser />;
     }
+    // Default to Dashboard
     return <Dashboard />;
   };
   

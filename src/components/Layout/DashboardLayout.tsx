@@ -31,7 +31,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
             <ul className="space-y-2 px-2">
               <li>
                 <a 
-                  href="/dashboard" 
+                  href="/" 
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200"
                 >
                   <Users className="h-5 w-5" />

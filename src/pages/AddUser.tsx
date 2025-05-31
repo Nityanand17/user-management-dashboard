@@ -50,8 +50,8 @@ const AddUser: React.FC = () => {
       // Reset form after submission
       resetForm();
       
-      // Navigate to dashboard
-      window.location.href = '/dashboard';
+      // Navigate to dashboard using relative path
+      window.location.href = '/';
     }
   };
   
@@ -133,7 +133,7 @@ const AddUser: React.FC = () => {
               disabled={currentStepIndex === 0}
               className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium
                 ${currentStepIndex === 0
-                  ? 'text-gray-400 cursor-not-allowed'
+                  ? 'text-gray-400 cursor-not-allowed dark:text-gray-600'
                   : 'text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white'}`}
             >
               <ArrowLeft className="h-4 w-4" />
@@ -142,7 +142,7 @@ const AddUser: React.FC = () => {
             
             <div className="flex gap-3">
               <a
-                href="/dashboard"
+                href="/"
                 className="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
               >
                 Cancel
